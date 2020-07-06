@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center;">Third Umpire Decision</h1>
+
+<iframe src="pending(2).mp4?autoplay=1" autoplay id="iframe_a" height="407px" width="607px"></iframe>
+
+<div style="width:60%;float:left;">
+<video width="80%" height="30%" autoplay id="Video1" >
+  <source src="abc.mp4" type="video/mp4">
+</video>
+
+<h1 style="text-align:center; margin-top:2%;">The video controls attribute</h1>
+
+<div id="buttonbar" style="margin-bottom:5%;">
+    <button id="button" onclick="restart();">restart</button> 
+    <button id="button" onclick="skip(-5)">&lt;&lt;</button>
+    <button id="button" onclick="vidplay()">Play / Pause</button>
+    <button id="button" onclick="skip(5)">&gt;&gt;</button>
+</div>   
+</div>
+
+
+<div id="buttonbar" style="width:40%;float:right;margin-top:10%;">
+<button onclick="getPlaySpeed()" type="button">Know current playback speed?</button>
+<br>
+<br>
+
+</div>
+
+<div id="buttonbar"  style="width:30%;float:right;">
+<h1 style="text-align:center; margin-top:2%;">The Speed controls attribute</h1>
+<br>
+<div id="buttonbar" >
+<button onclick="setPlaySpeed(1.25)" type="button" >1.25x</button>
+<button onclick="setPlaySpeed(1)" type="button" id="button">1x</button>
+<button onclick="setPlaySpeed(0.7)" type="button" id="button">0.7x</button>
+<button onclick="setPlaySpeed(0.5)" type="button" id="button">0.5x</button>
+<button onclick="setPlaySpeed(0.3)" type="button" id="button">0.3x</button>
+</div>
+</div>
+
+<div id="buttonbar" style="width:30%;float:right;">
+<h1>Make The Decision</h1>
+    <button onclick="notout()"id="button" >NOT OUT</button> 
+    <button onclick="out()" id="button">OUT</button>
+</div> 
+
+<script src="js.js">
+</script>
+
+
+
+</body>
+</html>
