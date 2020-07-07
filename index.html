@@ -7,50 +7,106 @@
 
 <body>
 
+<!-- output screen -->
+<div id="heading" style="background-color:#AAF7F3 ;">
 <h1 style="text-align:center;">Third Umpire Decision</h1>
+</div>
 
-<iframe src="pending(2).mp4?autoplay=1" autoplay id="iframe_a" height="407px" width="607px"></iframe>
+<div id="decision-screen" >
+<!--iframe src="pending(2).mp4"  id="iframe_a" height="407px" width="607px"> </iframe-->
+<video autoplay muted loop  width="607px" id="iframe_a" >
+  <source src="pending(2).mp4" >
+</video>
+</div>
 
-<div style="width:60%;float:left;">
-<video width="80%" height="30%" autoplay id="Video1" >
+<!--output section ends here -->
+
+
+<!-- Third Umpire Section Starts from here -->
+
+<div id="heading"  style="background-color:#BBE179;">
+
+<h1 style="text-align:center;">Third Umpire Section</h1>
+
+</div>
+
+
+<!-- Video and Video contol attributes -->
+
+<div id="review" >
+<div class="card" >
+<video  id="Video1"  >
   <source src="abc.mp4" type="video/mp4">
 </video>
+</div>
 
-<h1 style="text-align:center; margin-top:2%;">The video controls attribute</h1>
+<!-- video control -->
+<h1 style="text-align:center;">The video controls attribute</h1>
 
-<div id="buttonbar" style="margin-bottom:5%;">
+<div style="margin-bottom:5%;">
     <button id="button" onclick="restart();">restart</button> 
-    <button id="button" onclick="skip(-5)">&lt;&lt;</button>
+	<button id="button" onclick="skip(-0.15)">&lt;&lt;&lt;</button>
+    <button id="button" onclick="skip(-0.1)">&lt;&lt;</button>
+	<button id="button" onclick="skip(-0.02)">&lt;</button>
     <button id="button" onclick="vidplay()">Play / Pause</button>
-    <button id="button" onclick="skip(5)">&gt;&gt;</button>
-</div>   
+	<button id="button" onclick="skip(0.01)">&gt;</button>
+	<button id="button" onclick="skip(0.05)">&gt;&gt;</button>
+    <button id="button" onclick="skip(0.1)">&gt;&gt;&gt;</button>
+</div> 
+  
 </div>
 
+<!-- video contol section ends here -->
 
-<div id="buttonbar" style="width:40%;float:right;margin-top:10%;">
-<button onclick="getPlaySpeed()" type="button">Know current playback speed?</button>
-<br>
-<br>
 
-</div>
 
-<div id="buttonbar"  style="width:30%;float:right;">
+<!-- Speed Control Section -->
+
+<div id="buttonbar" >
 <h1 style="text-align:center; margin-top:2%;">The Speed controls attribute</h1>
 <br>
-<div id="buttonbar" >
-<button onclick="setPlaySpeed(1.25)" type="button" >1.25x</button>
+<div >
 <button onclick="setPlaySpeed(1)" type="button" id="button">1x</button>
-<button onclick="setPlaySpeed(0.7)" type="button" id="button">0.7x</button>
 <button onclick="setPlaySpeed(0.5)" type="button" id="button">0.5x</button>
 <button onclick="setPlaySpeed(0.3)" type="button" id="button">0.3x</button>
+<button onclick="setPlaySpeed(0.2)" type="button" id="button">0.2x</button>
+<button onclick="setPlaySpeed(0.1)" type="button" id="button">0.1x</button>
 </div>
 </div>
 
-<div id="buttonbar" style="width:30%;float:right;">
+<!-- speed control section ends here -->
+
+
+<!-- Decision Section -->
+
+<div id="buttonbar" style="background-color:yellow;">
 <h1>Make The Decision</h1>
     <button onclick="notout()"id="button" >NOT OUT</button> 
     <button onclick="out()" id="button">OUT</button>
+	<br>
+	<br>
+	<button onclick="out()" id="button">NO BALL</button>
 </div> 
+
+<!--Decision Section Ends here -->
+
+
+
+<!--Help section -->
+
+<div id="buttonbar"  style="background-color:#8BF9AE;">
+<h1 style="text-align:center; margin-top:2%;">HELP</h1>
+
+<div >
+<button onclick="getPlaySpeed()" type="button" id="button">Know current playback speed?</button>
+<button onclick="clear()" type="button" id="button">Clear</button>
+<br>
+<br>
+</div>
+
+</div>
+
+<!--Script Section -->
 
 <script src="js.js">
 </script>
