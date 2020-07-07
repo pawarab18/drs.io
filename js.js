@@ -3,10 +3,8 @@
        var button = document.getElementById("play");
        if (video.paused) {
           video.play();
-          button.textContent = "||";
        } else {
           video.pause();
-          button.textContent = ">";
        }
     }
 
@@ -38,4 +36,9 @@
 	function notout() {
 		var vid=document.getElementById("iframe_a");
 		vid.src="notout2.jpg";
+	}
+	
+	function clear() {
+		var vid=document.getElementById("iframe_a");
+		vid.src="pending(2).mp4";
 	}
